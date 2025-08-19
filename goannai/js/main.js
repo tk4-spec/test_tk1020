@@ -39,7 +39,7 @@ if (pageTopButton) {
 
 // Page switching logic
 $(function() {
-    const mainContent = $('main').first();
+    const mainContent = $('body > main').first();
     const pageContents = $('.page-content');
 
     function showPage(targetId) {
@@ -49,7 +49,7 @@ $(function() {
         } else {
             mainContent.hide();
             pageContents.hide();
-            $(targetId).show();
+            $(targetId).css('display', 'block');
         }
         window.scrollTo(0, 0);
     }
