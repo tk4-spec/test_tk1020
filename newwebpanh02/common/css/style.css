@@ -185,7 +185,9 @@ header h1 img{
 }
         /* ボックス全体を囲むコンテナ */
         .box-container {
-            gap: 10px; /* ボックス間の隙間 */
+            display: flex;
+            flex-direction: column;
+            gap: 5px; /* ボックス間の隙間 */
             padding: 5px; /* コンテナの内側の余白 */
             max-width: 300px; /* コンテナの最大幅 */
             margin: 20px auto; /* ページの中央に配置 */
@@ -196,14 +198,14 @@ header h1 img{
             display: flex; /* aタグをフレックスボックスに */
             flex-direction: column; /* 要素を縦方向に並べる */
             justify-content: center; /* 中央揃え */
-            align-items: center; /* 中の要素を垂直方向に中央揃え */
+            align-items: flex-start; /* 中の要素を垂直方向に中央揃え */
             background-color: #ffffff; /* ボックスの背景色 */
             border-radius: 10px; /* ボックスの角を丸める */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ボックスに影をつける */
             text-decoration: none; /* リンクの下線を消す */
             color: #333333; /* 文字色 */
-            padding: 5px; /* ボックスの内側の余白を調整 */
-            text-align: center; /* テキストを中央揃えに */
+            padding: 5px 10px; /* ボックスの内側の余白を調整 */
+            text-align: left; /* テキストを中央揃えに */
             transition: transform 0.3s, box-shadow 0.3s; /* ホバー時のアニメーション効果 */
         }
 
