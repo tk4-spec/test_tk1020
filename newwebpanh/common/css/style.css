@@ -200,15 +200,16 @@ header h1 img{
             flex-direction: column; /* 要素を縦方向に並べる */
             justify-content: center; /* 中央揃え */
             align-items: center; /* 中の要素を垂直方向に中央揃え */
-            height: 70px;
             background-color: #ffffff; /* ボックスの背景色 */
             border-radius: 10px; /* ボックスの角を丸める */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ボックスに影をつける */
             text-decoration: none; /* リンクの下線を消す */
             color: #333333; /* 文字色 */
-            padding: 10px; /* ボックスの内側の余白を調整 */
+            padding: 15px; /* ボックスの内側の余白を調整 */
             text-align: center; /* テキストを中央揃えに */
             transition: transform 0.3s, box-shadow 0.3s; /* ホバー時のアニメーション効果 */
+            width: 200px; /* ボックスの幅を固定 */
+            min-height: 150px; /* ボックスの最小の高さを設定 */
         }
 
         /* マウスを乗せた時のスタイル */
@@ -219,9 +220,9 @@ header h1 img{
 
         /* ボックス内の画像のスタイル */
         .box-link img {
-            max-width: 50%; /* 画像の幅を調整 */
+            max-width: 120px; /* 画像の最大幅を調整 */
             height: auto;
-            margin-bottom: 5px; /* 画像とテキストの間の余白 */
+            margin-bottom: 10px; /* 画像とテキストの間の余白 */
         }
 
         /* ボックス内の文字のスタイル */
