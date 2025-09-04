@@ -1,0 +1,395 @@
+@charset"utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+	font-family: 'oswald';
+	src: url(../font/Oswald/Oswald-Medium.ttf);
+}
+/* ===================================
+*
+　★リセットCSS
+*
+===================================-*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+html {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+q, blockquote {
+    quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none;
+}
+a img {
+    border: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+html {
+    overflow: auto;
+    font-size: 62.5%;
+}
+body {
+	color: #fff;
+	background-color: #fff;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	-webkit-text-size-adjust: none;
+	position: relative;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 500;
+	background: #FF8C00;
+}
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+body p,body ul li a,body ul,body li,dl,dt,dd{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+}
+button, input,input[type=button], input[type=reset], input[type=submit] {
+    touch-action: manipulation;
+    transition: border .15s linear, color .15s linear, background-color .15s linear;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+}
+img {
+	vertical-align: bottom;
+	height: auto;
+}
+:focus {
+    outline: none;
+}
+
+
+
+/* ===================================
+*
+　共通
+*
+===================================-*/
+.inner{
+	width: 88%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+.pc{
+	display: block;
+}
+.sp{
+	display: none;
+}
+.flex{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+}
+
+
+
+/* ===================================
+*
+　ヘッダー
+*
+===================================-*/
+header{
+	background: #fff;
+	padding: 13px 0;
+}
+header h1 img{
+	width: 190px;
+}
+
+
+
+/* ===================================
+*
+　タイトル
+*
+===================================-*/
+.box1{
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+.box1 .ttl{
+	padding: 15px;
+    background: #fff;
+    border-radius:5px;
+}
+.box1 .ttl {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.box1 .ttl img{
+	width: 100%;
+	max-width: 500px;
+	display: block;
+	margin: 0 auto 25px;
+}
+.box1 .inner{
+	position: relative;
+}
+
+.pickup-heading {
+	text-align: center;
+	color: #fff;
+	font-size: 1.8rem;
+	margin: 20px 0;
+}
+        /* ボックス全体を囲むコンテナ */
+        .box-container {
+            display: grid; /* グリッドレイアウトを適用 */
+            grid-template-columns: repeat(2, 1fr); /* 横に2つの均等な列を作成 */
+            gap: 10px; /* ボックス間の隙間 */
+            padding: 10px; /* コンテナの内側の余白 */
+            max-width: 400px; /* コンテナの最大幅 */
+            margin: 20px auto; /* ページの中央に配置 */
+        }
+
+        /* 個々のボックス（リンク）のスタイル */
+        .box-link {
+            display: flex; /* aタグをフレックスボックスに */
+            flex-direction: column; /* 要素を縦方向に並べる */
+            justify-content: center; /* 中央揃え */
+            align-items: center; /* 中の要素を垂直方向に中央揃え */
+            height: 70px;
+            background-color: #ffffff; /* ボックスの背景色 */
+            border-radius: 10px; /* ボックスの角を丸める */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ボックスに影をつける */
+            text-decoration: none; /* リンクの下線を消す */
+            color: #333333; /* 文字色 */
+            padding: 10px; /* ボックスの内側の余白を調整 */
+            text-align: center; /* テキストを中央揃えに */
+            transition: transform 0.3s, box-shadow 0.3s; /* ホバー時のアニメーション効果 */
+        }
+
+        /* マウスを乗せた時のスタイル */
+        .box-link:hover {
+            transform: translateY(-5px); /* 少し上に浮き上がる */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 影を濃くする */
+        }
+
+        /* ボックス内の画像のスタイル */
+        .box-link img {
+            max-width: 50%; /* 画像の幅を調整 */
+            height: auto;
+            margin-bottom: 5px; /* 画像とテキストの間の余白 */
+        }
+
+        /* ボックス内の文字のスタイル */
+        .box-link p {
+            margin: 0; /* マージンをリセット */
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.4;
+        }
+
+        .box-link .booth-number {
+            font-size: 1.0rem; /* 16px */
+        }
+
+        .box-link .company-name {
+            font-size: 1.5rem; /* 22px */
+            font-weight: normal;
+        }
+
+/*PC用CSSここから*/
+@media screen and (min-width: 768px) {
+	.box1 .ttl img{
+		width: 430px;
+		display: block;
+		margin: 0 auto 25px;
+	}
+}/*PC - end*/
+
+
+/*PC用CSSここから*/
+@media screen and (min-width: 768px) {
+	.date-location-info .inner{
+		margin: 0 auto;
+	}
+}/*PC - end*/
+
+/*iphone5-SEなど*/
+@media screen and (max-width:320px) {
+	.date-location-info .day{
+		flex-wrap: wrap;
+	}
+	.date-location-info .inner{
+		margin: 0 auto;
+		width: 85%;
+		padding: 0;
+	}
+}/*iphone5-SE - end*/
+
+
+
+/* ===================================
+*
+　リンク
+*
+===================================-*/
+.box3{
+	margin-top: 28px;
+}
+.box3 .inner{
+	width: 98%;
+}
+.box3 .inner .btn{
+	justify-content: space-between;
+	align-items: stretch;
+}
+.box3 .inner .btn li{
+	border-left: 1px solid #fff;
+	width: 33%;
+}
+.box3 .inner .btn li a{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	box-sizing: border-box;
+_display: block;
+}
+.box3 .inner .btn li:first-child{
+	border-left: none;
+}
+.box3 .inner .btn li img{
+	width: 63px;
+	display: block;
+	margin: 0 auto;
+}
+.box3 .inner .btn li p{
+	color: #fff;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.3;
+    margin-top: 8px;
+    padding-bottom: 17px;
+	position: relative;
+}
+.box3 .inner .btn li p:before{
+	position: absolute;
+    bottom: 0;
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    content: "";
+    left: 50%;
+    background-image: url(../../img/arrow.png);
+    width: 15px;
+    height: 8px;
+}
+.linkbtn{
+	display: block;
+	background: #fff;
+	border-radius: 100px;
+	text-align: center;
+	margin: 5% auto 0;
+	position: relative;
+	width: 90%;
+	color: #FF8C00;
+	font-size: 1.3rem;
+	line-height: 1;
+	padding: 12px;
+	padding-left: 20px;
+}
+.linkbtn:before{
+	position: absolute;
+    content: "";
+    background-image: url(../../img/icon7.png);
+    left: 18px;
+    width: 40px;
+    height: 34px;
+    background-size: 63%;
+    background-repeat: no-repeat;
+    top: 7px;
+}
+.linkbtn:after{
+	position: absolute;
+	content: "";
+	background-image: url(../../img/arrow_2.png);
+	right: 10px;
+	width: 13px;
+	height: 23px;
+	background-size: 64%;
+	background-repeat: no-repeat;
+	top: 11px;
+}
+/*PC用CSSここから*/
+@media screen and (min-width: 768px) {
+	.box3 .inner .btn li{
+		width: 33%;
+	}
+	.box3 .inner .btn li img{
+		width: 100px;
+		margin: 0 auto;
+		display: block;
+	}
+}/*PC - end*/
+
+
+
+/* ===================================
+*
+　footer
+*
+===================================-*/
+footer{
+	background: #fff;
+	color: #000;
+	text-align: center;
+	font-size: 1rem;
+	padding: 13px 0;
+	margin-top: 20px;
+}
+footer .ttl{
+	border-bottom: 1px solid #000;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
