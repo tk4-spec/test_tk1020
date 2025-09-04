@@ -185,8 +185,9 @@ header h1 img{
 }
         /* ボックス全体を囲むコンテナ */
         .box-container {
-            display: grid; /* グリッドレイアウトを適用 */
-            grid-template-columns: repeat(2, 1fr); /* 横に2つの均等な列を作成 */
+            display: flex; /* フレックスボックスレイアウトを適用 */
+            justify-content: center; /* 水平方向の中央揃え */
+            flex-wrap: wrap; /* アイテムを折り返す */
             gap: 10px; /* ボックス間の隙間 */
             padding: 10px; /* コンテナの内側の余白 */
             max-width: 400px; /* コンテナの最大幅 */
