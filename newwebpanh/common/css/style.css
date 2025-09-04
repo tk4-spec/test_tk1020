@@ -209,7 +209,7 @@ header h1 img{
             text-align: center; /* テキストを中央揃えに */
             transition: transform 0.3s, box-shadow 0.3s; /* ホバー時のアニメーション効果 */
             width: 200px; /* ボックスの幅を固定 */
-            min-height: 150px; /* ボックスの最小の高さを設定 */
+            min-height: 130px; /* ボックスの最小の高さを設定 */
         }
 
         /* マウスを乗せた時のスタイル */
