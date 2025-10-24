@@ -137,14 +137,14 @@ header h1 img{
 	padding-bottom: 20px;
 }
 .box1 .ttl{
-	padding: 20px;
+	padding: 15px;
     background: #fff;
     border-radius: 8px; /* Slightly larger border-radius */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Added subtle shadow */
 }
 .box1 .ttl img{
 	width: 100%;
-	max-width: 350px; /* Set a max-width */
+	max-width: 300px; /* Set a max-width */
 	display: block;
 	margin: 0 auto;
 }
@@ -156,7 +156,7 @@ header h1 img{
 ===================================-*/
 .event-info {
     text-align: center;
-    margin-top: 20px; /* Increased margin */
+    margin-top: 15px; /* Increased margin */
 }
 
 .event-info .date-time {
