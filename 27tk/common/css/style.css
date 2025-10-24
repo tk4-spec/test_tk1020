@@ -151,94 +151,30 @@ header h1 img{
 
 /* ===================================
 *
-　日時・場所
+　イベント情報
 *
 ===================================-*/
-.box2 {
-    margin-top: 20px;
+.event-info {
+    text-align: center;
+    margin-top: 15px;
 }
-.box2 .inner{
-    background: #fff;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+.event-info .date-time {
+    font-size: 1.6rem;
+    color: #555;
+    font-weight: bold;
 }
-.box2 p{
-	padding-left: 40px; /* Adjusted padding */
-	position: relative;
-	line-height: 1.5;
-    margin-bottom: 15px;
+
+.event-info .date-time .day {
+    font-size: 1.4rem;
+    margin: 0 5px;
 }
-.box2 p:last-child {
-    margin-bottom: 0;
-}
-.box2 .day{
-	font-family: 'oswald', sans-serif;
-	font-size: 3.5rem; /* Adjusted font size */
-	display: flex;
-	align-items: center; /* Better alignment */
-	letter-spacing: 0.03em;
-}
-.box2 .day span{
-    font-family: 'Noto Sans JP', sans-serif;
-	height: 25px;
-	width: 25px;
-	border-radius: 50%;
-	line-height: 25px;
-	text-align: center;
-	background: #007bff;
-	color: #fff;
-	display: inline-block;
-	font-size: 1.6rem;
-	font-weight: 600;
-	margin-left: 10px;
-}
-.box2 p:before{
-	position: absolute;
-    top: 5px;
-    left: 0;
-    transform: none;
-    content: "";
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.box2 .day:before{
-	background-image: url(../../img/icon_1.png);
-	width: 24px;
-	height: 24px;
-}
-.box2 .time{
-	font-family: 'oswald', sans-serif;
-	font-size: 2.2rem;
-	letter-spacing: 0.03em;
-}
-.box2 .time:before{
-	background-image: url(../../img/icon_2.png);
-	width: 24px;
-	height: 24px;
-}
-.box2 .place{
-	font-size: 1.8rem;
-}
-.box2 .place:before{
-	background-image: url(../../img/icon_3.png);
-	width: 24px;
-	height: 32px;
-}
-/*PC用CSSここから*/
+
 @media screen and (min-width: 768px) {
-    body {
+    .event-info .date-time {
         font-size: 1.8rem;
     }
-	.box2 .inner{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-	}
-    .box2 p {
-        margin-bottom: 0;
-    }
-}/*PC - end*/
+}
 
 
 /* ===================================
@@ -250,6 +186,21 @@ header h1 img{
 	margin-top: 40px;
     padding-bottom: 40px;
     text-align: center;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
 }
 
 .main-action .linkbtn{
@@ -268,6 +219,7 @@ header h1 img{
 	padding: 20px 25px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: pulse 2s infinite;
 }
 
 .main-action .linkbtn:hover {
