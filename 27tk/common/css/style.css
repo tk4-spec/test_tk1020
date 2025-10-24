@@ -69,39 +69,29 @@ html {
     font-size: 62.5%;
 }
 body {
-	color: #fff;
-	background-color: #fff;
-	font-size: 1.5rem;
+	color: #333; /* Changed default text color */
+	background-color: #f0f4f8; /* Changed background color */
+	font-size: 1.6rem; /* Increased base font size */
 	line-height: 1.6;
 	-webkit-text-size-adjust: none;
 	position: relative;
 	font-family: 'Noto Sans JP', sans-serif;
 	font-weight: 500;
-	background: #1f9ce5;
 }
 a {
-    color: black;
+    color: #007bff; /* Changed default link color */
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
 a:hover {
-    text-decoration: none;
-    opacity: 0.6;
-}
-body p,body ul li a,body ul,body li,dl,dt,dd{
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 500;
-}
-button, input,input[type=button], input[type=reset], input[type=submit] {
-    touch-action: manipulation;
-    transition: border .15s linear, color .15s linear, background-color .15s linear;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 500;
+    text-decoration: underline;
+    opacity: 0.8;
 }
 img {
 	vertical-align: bottom;
 	height: auto;
+    max-width: 100%;
 }
 :focus {
     outline: none;
@@ -115,22 +105,10 @@ img {
 *
 ===================================-*/
 .inner{
-	width: 88%;
-    max-width: 750px;
+	width: 90%;
+    max-width: 800px;
     margin: 0 auto;
 }
-.pc{
-	display: block;
-}
-.sp{
-	display: none;
-}
-.flex{
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex;
-}
-
 
 
 /* ===================================
@@ -140,10 +118,11 @@ img {
 ===================================-*/
 header{
 	background: #fff;
-	padding: 13px 0;
+	padding: 15px 0;
+    border-bottom: 1px solid #ddd;
 }
 header h1 img{
-	width: 190px;
+	width: 200px;
 }
 
 
@@ -154,139 +133,112 @@ header h1 img{
 *
 ===================================-*/
 .box1{
-	margin-top: 25px;
-	padding-bottom: 18px;
+	margin-top: 30px;
+	padding-bottom: 20px;
 }
 .box1 .ttl{
-	padding: 25px;
+	padding: 20px;
     background: #fff;
-    border-radius:5px;
+    border-radius: 8px; /* Slightly larger border-radius */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Added subtle shadow */
 }
 .box1 .ttl img{
-	width: 67%;
+	width: 100%;
+	max-width: 350px; /* Set a max-width */
 	display: block;
 	margin: 0 auto;
 }
-.box1 .inner{
-	position: relative;
-}
-.box1 .illust{
-	height: 100px;
-	position: absolute;
-	bottom: -18px;
-}
-.box1 .illust1{
-	left: -12px;
-}
-.box1 .illust2{
-    right: -12px;
-}
-/*PC用CSSここから*/
-@media screen and (min-width: 768px) {
-	.box1 .ttl img{
-		width: 330px;
-		display: block;
-		margin: 0 auto;
-	}
-}/*PC - end*/
-
 
 /* ===================================
 *
 　日時・場所
 *
 ===================================-*/
+.box2 {
+    margin-top: 20px;
+}
 .box2 .inner{
-	width: 100%;
-	padding: 0 49px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .box2 p{
-	padding-left: 48px;
+	padding-left: 40px; /* Adjusted padding */
 	position: relative;
-	line-height: 1;
+	line-height: 1.5;
+    margin-bottom: 15px;
+}
+.box2 p:last-child {
+    margin-bottom: 0;
 }
 .box2 .day{
 	font-family: 'oswald', sans-serif;
-	font-size: 4.5rem;
+	font-size: 3.5rem; /* Adjusted font size */
 	display: flex;
-	align-items: flex-end;
+	align-items: center; /* Better alignment */
 	letter-spacing: 0.03em;
-	margin-bottom: 17px;
 }
 .box2 .day span{
-	height: 28px;
-	width: 28px;
+    font-family: 'Noto Sans JP', sans-serif;
+	height: 25px;
+	width: 25px;
 	border-radius: 50%;
-	line-height: 1.3;
+	line-height: 25px;
 	text-align: center;
-	background: #fff;
-	color: #1f9ce5;
-	display: block;
-	font-size: 2rem;
+	background: #007bff;
+	color: #fff;
+	display: inline-block;
+	font-size: 1.6rem;
 	font-weight: 600;
-	margin-left: 4px;
-	padding-left: 2px;
-}
-.box2 .day span:first-child{
-	margin-right: 7px;
+	margin-left: 10px;
 }
 .box2 p:before{
 	position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(0%, -50%);
-    transform: translate(0%, -50%);
-    content: "";
+    top: 5px;
     left: 0;
+    transform: none;
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .box2 .day:before{
 	background-image: url(../../img/icon_1.png);
-	width: 22px;
-	height: 23px;
+	width: 24px;
+	height: 24px;
 }
 .box2 .time{
 	font-family: 'oswald', sans-serif;
-	font-size: 1.9rem;
+	font-size: 2.2rem;
 	letter-spacing: 0.03em;
-	margin-bottom:20px;
-}
-.box2 .time span{
-	font-weight: 600;
 }
 .box2 .time:before{
 	background-image: url(../../img/icon_2.png);
-	width: 22px;
-	height: 21px;
+	width: 24px;
+	height: 24px;
 }
 .box2 .place{
-	font-size: 1.6rem;
-    padding-left: 39px;
-	line-height: 1.4;
+	font-size: 1.8rem;
 }
 .box2 .place:before{
 	background-image: url(../../img/icon_3.png);
-	width: 22px;
-	height: 30px;
+	width: 24px;
+	height: 32px;
 }
 /*PC用CSSここから*/
 @media screen and (min-width: 768px) {
+    body {
+        font-size: 1.8rem;
+    }
 	.box2 .inner{
-		margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
 	}
+    .box2 p {
+        margin-bottom: 0;
+    }
 }/*PC - end*/
-
-/*iphone5-SEなど*/
-@media screen and (max-width:320px) {
-	.box2 .day{
-		flex-wrap: wrap;
-	}
-	.box2 .inner{
-		margin: 0 auto;
-		width: 85%;
-		padding: 0;
-	}
-}/*iphone5-SE - end*/
-
 
 
 /* ===================================
@@ -295,66 +247,57 @@ header h1 img{
 *
 ===================================-*/
 .box3{
-	margin-top: 28px;
+	margin-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
 }
-.box3 .inner{
-	width: 100%;
-}
-.linkbtn{
-	display: block;
-	background: #fff;
-	border-radius: 100px;
+
+.main-action .linkbtn{
+	display: inline-block;
+	background: #007bff; /* Strong call-to-action color */
+	border-radius: 8px;
 	text-align: center;
-	margin: 20px auto 0;
+	margin: 0 auto 20px;
 	position: relative;
-	width: 90%;
-	max-width: 500px;
-	color: #1f9ce5;
-	font-size: 1.4rem;
+	width: 100%;
+	max-width: 450px;
+	color: #fff; /* White text for contrast */
+	font-size: 2.0rem;
 	font-weight: bold;
 	line-height: 1.5;
-	padding: 15px 40px 15px 15px;
+	padding: 20px 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.linkbtn:first-child{
-	margin-top: 0;
+
+.main-action .linkbtn:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    text-decoration: none;
 }
-.linkbtn:after{
-	position: absolute;
-	content: "";
-	background-image: url(../../img/arrow_2.png);
-	right: 20px;
-	width: 13px;
-	height: 23px;
-	background-size: 64%;
-	background-repeat: no-repeat;
-	top: 50%;
-	transform: translateY(-50%);
+
+.main-action .linkbtn:after{
+	display: none; /* Removed arrow */
 }
+
+.sub-action {
+    margin-top: 25px;
+}
+
+.sub-action a {
+    color: #555;
+    font-size: 1.6rem;
+    text-decoration: underline;
+}
+
+.sub-action a:hover {
+    color: #007bff;
+}
+
 /*PC用CSSここから*/
 @media screen and (min-width: 768px) {
-	.linkbtn{
-		font-size: 1.6rem;
-		padding: 20px 40px 20px 20px;
+	.main-action .linkbtn{
+		font-size: 2.2rem;
 	}
 }/*PC - end*/
-
-
-
-/* ===================================
-*
-　footer
-*
-===================================-*/
-footer{
-	background: #fff;
-	color: #000;
-	text-align: center;
-	font-size: 1rem;
-	padding: 13px 0;
-	margin-top: 20px;
-}
-footer .ttl{
-	border-bottom: 1px solid #000;
-	padding-bottom: 5px;
-	margin-bottom: 5px;
-}
