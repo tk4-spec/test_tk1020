@@ -285,3 +285,68 @@ header h1 img{
 		font-size: 2.2rem;
 	}
 }/*PC - end*/
+
+/* ===================================
+*
+　企業広告セクション
+*
+===================================-*/
+.company-ad-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.0rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.ad-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* カード間の余白 */
+}
+
+.ad-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: calc(50% - 10px); /* 2列表示のための幅計算 */
+    max-width: 220px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ad-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    text-decoration: none;
+}
+
+.ad-card img {
+    height: 60px; /* ロゴの高さを統一 */
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.company-name {
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .ad-card {
+        width: calc(80% - 20px); /* スマホでは1列表示 */
+    }
+}
