@@ -210,8 +210,8 @@ header h1 img{
 
 .speech-bubble {
     position: absolute;
-    top: -10px;
-    left: -20px;
+    top: -20px;
+    left: -30px;
     background: #ff4757;
     color: #fff;
     padding: 8px 12px;
