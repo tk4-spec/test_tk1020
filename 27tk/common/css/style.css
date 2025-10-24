@@ -272,10 +272,11 @@ header h1 img{
     color: #555;
     font-size: 1.6rem;
     text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
 .sub-action a:hover {
-    color: #007bff;
+    color: #0056b3; /* A darker blue for hover */
 }
 
 /*PC用CSSここから*/
