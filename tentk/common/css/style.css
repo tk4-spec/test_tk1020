@@ -236,7 +236,7 @@ header h1 img{
 
 .main-action .linkbtn{
 	display: inline-block;
-	background: #007bff;
+	background: #FF9800;
 	border-radius: 8px;
 	text-align: center;
 	margin: 0 auto 20px;
@@ -251,6 +251,11 @@ header h1 img{
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     animation: pulse 1.5s infinite;
+}
+
+.main-action .linkbtn .sub-text {
+	font-size: 1.8rem;
+	font-weight: 500;
 }
 
 .main-action .linkbtn:hover {
